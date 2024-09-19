@@ -47,9 +47,9 @@ Moderna is a sleek and modern web application designed to showcase and sell high
 
 ## Project Structure
 
-- `/pages`: Contains the application's pages.
-- `/components`: Reusable UI components.
-- `/styles`: Global and component-specific styles.
+- `/app`: Contains the application's pages and components.
+- `/app/components`: Reusable UI components.
+- `/app/styles.css`: Global and component-specific styles.
 
 ## Contributing
 
