@@ -1,27 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #131112;
+  --secondary: #fffcf8;
+  --tertiary: #d1c8ba;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--primary);
+  font-family: "Archivo", sans-serif;
+  transition: all 0.5s ease;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+}
+html body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--secondary);
+  overflow-y: scroll;
+}
+html body::-webkit-scrollbar {
+  display: none;
+}
+html body section {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 3rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+img {
+  height: 100%;
+  max-height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.icon-white {
+  color: var(--secondary) !important;
+}
+.icon-white path {
+  fill: var(--secondary) !important;
+}
+
+.icon-black {
+  color: var(--primary) !important;
+}
+.icon-black path {
+  fill: var(--primary) !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary * {
+  color: var(--secondary);
 }
